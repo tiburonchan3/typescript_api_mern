@@ -1,0 +1,24 @@
+@host = http://localhost:8000
+
+###
+GET {{host}}/videos
+###
+POST  {{host}}/videos
+Content-Type: application/json
+
+{
+    "url" : "https://www.youtube.com/watch?v=z_d5D-UISbM",
+    "title" : "Tame Impala",
+    "description" : "Video de youtube"
+}
+###
+GET {{host}}/videos/5f8f6c075e636e03b0b2cf22
+###
+DELETE {{host}}/videos/5f8f6c075e636e03b0b2cf22
+###
+PUT {{host}}/videos/5f8f6e2b2d27ef1420f66cd0
+Content-Type: application/json
+
+{
+    "title" : "Tame Impala - Expectation (Official Audio)"
+}
